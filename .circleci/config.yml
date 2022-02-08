@@ -10,6 +10,9 @@ jobs:
           name: Setup Environment Value
           command: echo 'export CIRCLE_TAG="22.0-old"' >> $BASH_ENV
       - run:
+          name: Check Path
+          command: pwd
+      - run:
           name: Build
           command: docker build -f bitcoind/dockerfile -t ${OWNER}/${IMAGE_NAME}:latest .
       - run:
