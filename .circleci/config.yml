@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Setup Environment Value
-          command: echo 'export CIRCLE_TAG="22.0-20220209"' >> $BASH_ENV
+          command: echo 'export CIRCLE_TAG="22.0-20220219"' >> $BASH_ENV
       - run:
           name: Build
           command: docker build -f bitcoind/dockerfile -t ${OWNER}/${IMAGE_NAME}:latest .
