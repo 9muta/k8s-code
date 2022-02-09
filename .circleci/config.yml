@@ -11,7 +11,7 @@ jobs:
           command: echo 'export CIRCLE_TAG="22.0-20220219"' >> $BASH_ENV
       - run:
           name: Show Environment Value
-          command: echo BASH_ENV
+          command: echo $BASH_ENV
       - run:
           name: Build
           command: docker build -f bitcoind/dockerfile -t ${OWNER}/${IMAGE_NAME}:latest .
