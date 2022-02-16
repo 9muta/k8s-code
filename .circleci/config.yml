@@ -23,7 +23,7 @@ jobs:
           command: docker tag ${OWNER}/${IMAGE_NAME}:latest ${OWNER}/${IMAGE_NAME}:$CIRCLE_TAG
       - run:
           name: Push image to registory
-          command: docker push ${OWNER}/${IMAGE_NAME}:$CIRCLE_TAG
+          command: docker push ${OWNER}/${IMAGE_NAME}:latest
 #      - add_ssh_keys:
 #          fingerprints:
 #            - $SSH_KEY_FINGERPRINT
